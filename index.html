@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Keep Clone</title>
+  <link rel="shortcut icon" type="image/png" href="assets/media/icon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.min.css" />
+</head>
+<body>
+  <div class="container-fluid py-3">
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 text-center mb-4">
+        <img src="assets/media/icon.png" class="logo" />
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <form>
+              <input type="text" name="title" placeholder="Title" class="form-control border-0 mb-3" />
+              <textarea name="content" rows="3" placeholder="Take a note..."
+                class="form-control border-0 mb-3"></textarea>
+              <button type="button" class="add">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="notes" class="row justify-content-start"></div>
+    <div id="modal" tabindex="-1" aria-labelledby="label" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit note</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <input type="text" name="modal-title" class="form-control mb-3" required />
+              <textarea name="modal-content" rows="3" class="form-control" required></textarea>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-bs-dismiss="modal" class="btn btn-secondary">Discard</button>
+            <button type="button" data-bs-dismiss="modal" class="btn btn-danger btn-delete">Delete</button>
+            <button type="button" data-bs-dismiss="modal" class="btn btn-primary btn-save">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/384a6fe07a.js" crossorigin="anonymous"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="https://dieggoyz.vercel.app/signature.js" defer></script>
+</body>
+</html>
